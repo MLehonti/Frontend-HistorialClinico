@@ -18,6 +18,7 @@
     "/usuarios",
     "/verantecedentes",
     "/verespecialidad",
+    "/vermihistorialclinico",
     "/vermisdiagnosticos",
     "/vermitriaje",
     "/vertriajes"

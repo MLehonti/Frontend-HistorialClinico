@@ -24,6 +24,7 @@ import { VerAntecedentesComponent } from './components/ver-antecedentes/ver-ante
 import { ListaTriajesPorPacienteComponent } from './components/lista-triajes-por-paciente/lista-triajes-por-paciente.component';
 import { CrearDiagnosticoComponent } from './components/crear-diagnostico/crear-diagnostico.component';
 import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.component';
+import { PacienteDetalleComponent } from './components/paciente-detalle/paciente-detalle.component';
 
 export const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
@@ -48,6 +49,8 @@ export const routes: Routes = [
   { path: 'vermitriaje', component: ListaTriajesPorPacienteComponent },
   { path: 'creardiagnostico', component: CrearDiagnosticoComponent},
   { path: 'vermisdiagnosticos', component: DiagnosticosComponent},
+  { path: 'vermihistorialclinico', component: PacienteDetalleComponent},
+
 
   
 

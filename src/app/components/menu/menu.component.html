@@ -1,0 +1,41 @@
+<!-- src/app/components/menu/menu.component.html -->
+<nav>
+  <ul>
+    <li><a routerLink="/perfil">Perfil</a></li>
+    <li><a routerLink="/citasusuario">Citas</a></li>
+    <li><a routerLink="/verespecialidad">Especialidades</a></li>
+
+    <!-- Elemento de Recursos con submenú oculto -->
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Recursos</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/usuarios">Usuarios</a></li>
+        <li><a routerLink="/medicos">Médicos</a></li>
+        <li><a routerLink="/crear-horario">Horarios</a></li>
+        <li><a routerLink="/asignar">Asignar Horarios</a></li>
+        <li><a routerLink="/citasmedico">Ver Citas</a></li>
+        <li><a routerLink="/vertriajes">Ver Todos los Triajes</a></li>
+        <li><a routerLink="/creartriaje">Crear Nuevo Triaje</a></li>
+        <li><a routerLink="/crearantecedente">Crear Nuevo Antecedente</a></li>
+        <li><a routerLink="/creardiagnostico">Crear Nuevo Diagnostico</a></li>
+
+
+
+
+      </ul>
+    </li>
+
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">HistorialClinico</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/vermitriaje">Ver Triajes</a></li>
+        <li><a routerLink="/verantecedentes">Ver Antecedentes</a></li>
+        <li><a routerLink="/vermisdiagnosticos">Ver Diagnostico</a></li>
+      </ul>
+    </li>
+
+    <li><a (click)="logout()">Cerrar Sesión</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

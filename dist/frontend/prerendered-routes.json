@@ -1,0 +1,25 @@
+{
+  "routes": [
+    "/asignar",
+    "/asignar-horario",
+    "/citasmedico",
+    "/citasusuario",
+    "/crear-horario",
+    "/crearantecedente",
+    "/creardiagnostico",
+    "/creartriaje",
+    "/especialidades",
+    "/especialidades-horarios",
+    "/login",
+    "/medicos",
+    "/menu",
+    "/perfil",
+    "/registro",
+    "/usuarios",
+    "/verantecedentes",
+    "/verespecialidad",
+    "/vermisdiagnosticos",
+    "/vermitriaje",
+    "/vertriajes"
+  ]
+}

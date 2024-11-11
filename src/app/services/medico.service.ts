@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MedicoService {
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = 'https://backend-historialclinico-2.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 

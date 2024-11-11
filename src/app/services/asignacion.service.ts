@@ -8,7 +8,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class AsignacionService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = 'https://backend-historialclinico-2.onrender.com/api';
 
   constructor() {}
 

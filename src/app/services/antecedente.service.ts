@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AntecedenteService {
-  private apiUrl = 'http://localhost:8080/api/antecedentes';
+  private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/antecedentes';
 
   constructor(private http: HttpClient) {}
 

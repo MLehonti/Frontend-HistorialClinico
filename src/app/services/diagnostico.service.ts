@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DiagnosticoService {
-  private apiUrl = 'http://localhost:8080/api/diagnosticos';
+  private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/diagnosticos';
 
   constructor(private http: HttpClient) {}
 

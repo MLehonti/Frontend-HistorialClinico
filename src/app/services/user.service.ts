@@ -108,9 +108,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'http://localhost:8080/api/usuarios'; // Ajusta si es necesario
-  private rolesUrl = 'http://localhost:8080/api/roles'; // Endpoint para roles
-  private triajeUrl = 'http://localhost:8080/api/triajes'; // Endpoint específico para triaje
+  private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/usuarios'; // Ajusta si es necesario
+  private rolesUrl = 'https://backend-historialclinico-2.onrender.com/api/roles'; // Endpoint para roles
+  private triajeUrl = 'https://backend-historialclinico-2.onrender.com/api/triajes'; // Endpoint específico para triaje
 
 
   constructor(private http: HttpClient) {}
@@ -161,7 +161,7 @@ export class UsuarioService {
 
   // Método para obtener todas las especialidades
   obtenerEspecialidades(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:8080/api/especialidades');
+    return this.http.get<any[]>('https://backend-historialclinico-2.onrender.com/api/especialidades');
   }
 
   // Método para obtener especialidades del médico logueado
@@ -182,7 +182,7 @@ export class UsuarioService {
 
   // Obtener los horarios disponibles para una especialidad específica
   obtenerHorariosPorEspecialidad(especialidadId: number): Observable<any[]> {
-    return this.http.get<any[]>(`http://localhost:8080/api/especialidades/${especialidadId}/horarios`);
+    return this.http.get<any[]>(`https://backend-historialclinico-2.onrender.com/api/especialidades/${especialidadId}/horarios`);
   }
 
   // Asignar horarios seleccionados a un médico
@@ -210,7 +210,7 @@ export class UsuarioService {
   
     // src/app/services/user.service.ts
   obtenerTriajes(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:8080/api/triajes/todos');
+    return this.http.get<any[]>('https://backend-historialclinico-2.onrender.com/api/triajes/todos');
   }
 
 
@@ -218,12 +218,12 @@ export class UsuarioService {
 
   // Obtener antecedentes por ID del usuario
   obtenerAntecedentesPorUsuarioId(usuarioId: number): Observable<any[]> {
-    return this.http.get<any[]>(`http://localhost:8080/api/antecedentes/usuario/${usuarioId}`);
+    return this.http.get<any[]>(`https://backend-historialclinico-2.onrender.com/api/antecedentes/usuario/${usuarioId}`);
   }
 
   // Obtener antecedentes por ID del paciente
   obtenerAntecedentesPorPacienteId(pacienteId: number): Observable<any[]> {
-    return this.http.get<any[]>(`http://localhost:8080/api/antecedentes/paciente/${pacienteId}`);
+    return this.http.get<any[]>(`https://backend-historialclinico-2.onrender.com/api/antecedentes/paciente/${pacienteId}`);
   }
 
 

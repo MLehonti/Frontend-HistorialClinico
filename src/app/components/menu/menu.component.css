@@ -89,3 +89,40 @@ nav a:hover {
   background-color: #e0e7ef;
   color: #007bff;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    min-width: 100%; /* Alinea el submenú al ancho completo */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .logout-button {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -30,7 +30,7 @@ export class RegistroComponent {
     if (this.registroForm.valid) {
       alert('Enviando datos...'); // Alert al enviar
 
-      this.http.post('http://localhost:8080/api/usuarios/registro', this.registroForm.value)
+      this.http.post('https://backend-historialclinico-2.onrender.com/api/usuarios/registro', this.registroForm.value)
         .subscribe(
           response => {
             this.mensajeExito = 'Registro exitoso.';

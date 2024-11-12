@@ -108,6 +108,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
+  //https://backend-historialclinico-2.onrender.com
   private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/usuarios'; // Ajusta si es necesario
   private rolesUrl = 'https://backend-historialclinico-2.onrender.com/api/roles'; // Endpoint para roles
   private triajeUrl = 'https://backend-historialclinico-2.onrender.com/api/triajes'; // Endpoint específico para triaje

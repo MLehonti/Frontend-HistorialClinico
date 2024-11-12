@@ -14,6 +14,7 @@ export interface Horario {
 export class HorarioService {
   // private apiUrl = 'http://localhost:8080/api';
   private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/horarios';
+  //private apiUrl = 'http://localhost:8080/api/horarios';
 
 
   constructor(private http: HttpClient) {}

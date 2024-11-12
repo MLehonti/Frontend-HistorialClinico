@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TriajeService {
   private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/triajes';
+  //private apiUrl = 'http://localhost:8080/api/triajes';
 
   constructor(private http: HttpClient) {}
 

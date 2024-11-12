@@ -5,8 +5,8 @@
     <li><a routerLink="/citasusuario">Citas</a></li>
     <li><a routerLink="/verespecialidad">Especialidades</a></li>
 
-    <!-- Elemento de Recursos con submenú oculto -->
-    <li class="dropdown">
+    <!-- Mostrar el menú Recursos solo si el usuario tiene un rol autorizado -->
+    <li *ngIf="canAccessRecursos()" class="dropdown">
       <a href="#" class="dropdown-toggle">Recursos</a>
       <ul class="dropdown-menu">
         <li><a routerLink="/usuarios">Usuarios</a></li>
@@ -18,13 +18,8 @@
         <li><a routerLink="/creartriaje">Crear Nuevo Triaje</a></li>
         <li><a routerLink="/crearantecedente">Crear Nuevo Antecedente</a></li>
         <li><a routerLink="/creardiagnostico">Crear Nuevo Diagnostico</a></li>
-
-
-
-
       </ul>
     </li>
-
 
     <li class="dropdown">
       <a href="#" class="dropdown-toggle">HistorialClinico</a>
@@ -33,8 +28,6 @@
         <li><a routerLink="/verantecedentes">Ver Antecedentes</a></li>
         <li><a routerLink="/vermisdiagnosticos">Ver Diagnostico</a></li>
         <li><a routerLink="/vermihistorialclinico">Ver mi Historial Completo</a></li>
-
-
       </ul>
     </li>
 

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class EspecialidadService {
   private apiUrl = 'https://backend-historialclinico-2.onrender.com/api/especialidades'; // URL del backend
 
+  //private apiUrl = 'http://localhost:8080/api/especialidades';
   constructor(private http: HttpClient) {}
 
   obtenerEspecialidades(): Observable<any[]> {

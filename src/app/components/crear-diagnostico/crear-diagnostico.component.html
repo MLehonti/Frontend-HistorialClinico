@@ -36,7 +36,13 @@
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" [(ngModel)]="fecha" name="fecha" required />
       </div>
-  
+
+      <div class="form-group">
+        <label for="tratamiento">Tratamiento:</label>
+        <textarea id="tratamiento" [(ngModel)]="tratamiento" name="tratamiento" required></textarea>
+      </div>
+
+    
       <div class="form-group">
         <label for="especialidadId">ID de Especialidad:</label>
         <input type="number" id="especialidadId" [(ngModel)]="especialidadId" name="especialidadId" required />

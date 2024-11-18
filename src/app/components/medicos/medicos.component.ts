@@ -101,7 +101,7 @@ export class MedicosComponent implements OnInit {
   }
 
   obtenerMedicos(): void {
-    this.http.get<any[]>('http://localhost:8080/api/usuarios/medicos')
+    this.http.get<any[]>('https://backend-historialclinico-2.onrender.com/api/usuarios/medicos')
       .subscribe(
         (data) => {
           this.medicos = data;
@@ -113,7 +113,7 @@ export class MedicosComponent implements OnInit {
   }
 
   obtenerEspecialidades(): void {
-    this.http.get<any[]>('http://localhost:8080/api/especialidades')
+    this.http.get<any[]>('https://backend-historialclinico-2.onrender.com/api/especialidades')
       .subscribe(
         (data) => {
           this.especialidades = data;
@@ -142,7 +142,7 @@ export class MedicosComponent implements OnInit {
 
   asignarEspecialidades(): void {
     if (this.medicoSeleccionado && this.especialidadesSeleccionadas.length > 0) {
-      this.http.post(`http://localhost:8080/api/usuarios/${this.medicoSeleccionado.id}/especialidades`, {
+      this.http.post(`https://backend-historialclinico-2.onrender.com/api/usuarios/${this.medicoSeleccionado.id}/especialidades`, {
         especialidadIds: this.especialidadesSeleccionadas
       }).subscribe(
         () => {

@@ -78,7 +78,7 @@ export class EspecialidadesUsuariosComponent implements OnInit {
     const turnoId = this.turnos.find(turno => turno.nombre === usuario.turno)?.id;
     const diaId = this.dias.find(dia => dia.nombre === usuario.dia)?.id;
   
-    // Crear el objeto cita con los IDs correctos, incluyendo el usuarioId del médico
+    // Crear el objeto cita con los datos necesarios, incluyendo la fecha y horarioId
     const cita = {
       usuarioId: this.usuarioId, // ID del usuario logueado (paciente)
       medicoId: usuario.usuarioId, // ID del médico seleccionado
@@ -86,7 +86,9 @@ export class EspecialidadesUsuariosComponent implements OnInit {
       turnoId: turnoId,
       diaId: diaId,
       horario: usuario.horario,
-      nombreUsuarioLogeado: this.usuarioNombre, // Nombre del usuario logueado
+      nombreUsuarioLogeado: this.usuarioNombre,
+      fecha: usuario.fecha, // Agrega la fecha de la entidad Horario
+      horarioId: usuario.horarioId // ID del horario seleccionado (asegúrate de que este valor esté en `usuario`)
     };
   
     console.log('Datos enviados a crearCita:', cita);
@@ -102,5 +104,7 @@ export class EspecialidadesUsuariosComponent implements OnInit {
       }
     );
   }
+  
+  
   
 }

@@ -128,3 +128,18 @@ nav a:hover {
 }
 
 
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center; /* Para alinear el ícono y el texto */
+}
+
+nav a .material-icons {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  font-size: 20px;
+}

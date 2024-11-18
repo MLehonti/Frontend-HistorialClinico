@@ -1,13 +1,12 @@
-<!-- src/app/components/paciente-detalle/paciente-detalle.component.html -->
 <app-menu></app-menu>
 
-<div class="paciente-detalle-container">
-    <h2>Mi Historial Clinico</h2>
-  
+<div class="paciente-detalle-container card">
+    <h2>Mi Historial Clínico</h2>
+    
     <!-- Triajes -->
-    <div *ngIf="triajes.length > 0">
+    <div *ngIf="triajes.length > 0" class="section">
       <h3>Triajes</h3>
-      <div *ngFor="let triaje of triajes" class="card">
+      <div *ngFor="let triaje of triajes" class="card-item">
         <p><strong>Fecha:</strong> {{ triaje.fecha }}</p>
         <p><strong>Hora:</strong> {{ triaje.hora }}</p>
         <p><strong>Temperatura:</strong> {{ triaje.temperatura }} °C</p>
@@ -27,12 +26,12 @@
     </div>
   
     <!-- Antecedentes -->
-    <div *ngIf="antecedentes.length > 0">
+    <div *ngIf="antecedentes.length > 0" class="section">
       <h3>Antecedentes</h3>
-      <div *ngFor="let antecedente of antecedentes" class="card">
+      <div *ngFor="let antecedente of antecedentes" class="card-item">
         <p><strong>Fecha:</strong> {{ antecedente.fecha }}</p>
         <p><strong>Descripción:</strong> {{ antecedente.descripcion }}</p>
-        <p><strong>Especialidad:</strong> {{ antecedente.especialidadNombre }}</p>
+        <p><strong>Especialidad:</strong> {{ antecedente.especialidad.nombre }}</p>
       </div>
     </div>
     <div *ngIf="antecedentes.length === 0">
@@ -40,12 +39,14 @@
     </div>
   
     <!-- Diagnósticos -->
-    <div *ngIf="diagnosticos.length > 0">
+    <div *ngIf="diagnosticos.length > 0" class="section">
       <h3>Diagnósticos</h3>
-      <div *ngFor="let diagnostico of diagnosticos" class="card">
+      <div *ngFor="let diagnostico of diagnosticos" class="card-item">
         <p><strong>Fecha:</strong> {{ diagnostico.fecha }}</p>
         <p><strong>Descripción:</strong> {{ diagnostico.descripcion }}</p>
-        <p><strong>Especialidad:</strong> {{ diagnostico.especialidadNombre }}</p>
+        <p><strong>Especialidad:</strong> {{ diagnostico.especialidad }}</p>
+        <p><strong>Tratamiento:</strong> {{ diagnostico.tratamiento }}</p>
+
       </div>
     </div>
     <div *ngIf="diagnosticos.length === 0">
@@ -56,5 +57,6 @@
     <div *ngIf="triajes.length === 0 && antecedentes.length === 0 && diagnosticos.length === 0">
       <p>No hay información de triajes, antecedentes o diagnósticos disponible para este paciente.</p>
     </div>
+
+    <button class="btn-imprimir" (click)="imprimirPDF()">Imprimir PDF</button>
   </div>
-  

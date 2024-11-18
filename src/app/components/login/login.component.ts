@@ -33,13 +33,17 @@ export class LoginComponent {
       this.usuarioService.login(this.loginForm.value).subscribe(
         response => {
           localStorage.setItem('token', response.token);
-          this.router.navigate(['/menu']);
+          this.router.navigate(['/bienvenida']);
         },
         error => {
           this.mensajeError = 'Credenciales incorrectas.';
         }
       );
     }
+  }
+
+  irARegistro(): void {
+    this.router.navigate(['/registro']); // Redirige a la vista de registro
   }
 }
 

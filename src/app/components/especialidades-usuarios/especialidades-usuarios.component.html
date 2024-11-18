@@ -1,6 +1,5 @@
 <app-menu></app-menu>
 <div class="especialidades-container">
-  
   <div class="especialidad-card" *ngFor="let especialidad of especialidades">
     <h3>{{ especialidad.nombre }}</h3>
     <button (click)="cargarUsuariosPorEspecialidad(especialidad.id)">Ver Medicos</button>
@@ -16,6 +15,8 @@
         <th>Turno</th>
         <th>Horario</th>
         <th>Día</th>
+        <th>Fecha</th>
+        <th>Disponibilidad</th>
         <th>Acción</th> <!-- Columna para el botón -->
       </tr>
     </thead>
@@ -25,6 +26,8 @@
         <td>{{ usuario.turno }}</td>
         <td>{{ usuario.horario }}</td>
         <td>{{ usuario.dia }}</td>
+        <td>{{ usuario.fecha }}</td> <!-- Mostrar la fecha tal como viene de la API -->
+        <td>{{ usuario.disponibilidad ? 'Disponible' : 'No Disponible' }}</td>
         <td><button (click)="seleccionarFicha(usuario)">Seleccionar Ficha</button></td> <!-- Botón -->
       </tr>
     </tbody>

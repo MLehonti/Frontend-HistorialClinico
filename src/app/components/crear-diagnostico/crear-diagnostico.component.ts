@@ -20,6 +20,7 @@ export class CrearDiagnosticoComponent implements OnInit {
   descripcion: string = '';
   fecha: string = '';
   especialidadId: number | null = null;
+  tratamiento: string ='';
 
   constructor(
     private usuarioService: UsuarioService,
@@ -69,8 +70,11 @@ export class CrearDiagnosticoComponent implements OnInit {
         pacienteId: this.pacienteSeleccionado.id,
         descripcion: this.descripcion,
         fecha: this.fecha,
-        especialidadId: this.especialidadId
+        especialidadId: this.especialidadId,
+        tratamiento: this.tratamiento
       };
+      console.log('Datos a enviar:', diagnosticoData); // Imprime los datos en la consola
+
 
       this.diagnosticoService.crearDiagnostico(diagnosticoData).subscribe(
         (response) => {
@@ -95,5 +99,6 @@ export class CrearDiagnosticoComponent implements OnInit {
     this.descripcion = '';
     this.fecha = '';
     this.especialidadId = null;
+    this.tratamiento = '';
   }
 }

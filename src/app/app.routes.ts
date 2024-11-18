@@ -25,8 +25,15 @@ import { ListaTriajesPorPacienteComponent } from './components/lista-triajes-por
 import { CrearDiagnosticoComponent } from './components/crear-diagnostico/crear-diagnostico.component';
 import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.component';
 import { PacienteDetalleComponent } from './components/paciente-detalle/paciente-detalle.component';
+import { AdminBitacoraComponent } from './admin-bitacora/admin-bitacora.component';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { UsuariosListaComponent } from './usuarios-lista/usuarios-lista.component';
+
+
 
 export const routes: Routes = [
+  { path: 'bienvenida', component: BienvenidaComponent},
+
   { path: 'registro', component: RegistroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'menu', component: MenuComponent, canActivate: [AuthGuard] },
@@ -38,7 +45,7 @@ export const routes: Routes = [
   { path:'asignar-horario',component:AsignarHorarioComponent},
   { path: 'especialidades-horarios', component: EspecialidadesHorariosComponent },
   { path: 'asignar', component: AsignarComponent },
-  { path: '', redirectTo: '/asignar', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'verespecialidad', component: EspecialidadesUsuariosComponent},
   { path: 'citasusuario', component: CitasUsuarioComponent },
   { path: 'citasmedico', component: CitasMedicoComponent },
@@ -50,6 +57,11 @@ export const routes: Routes = [
   { path: 'creardiagnostico', component: CrearDiagnosticoComponent},
   { path: 'vermisdiagnosticos', component: DiagnosticosComponent},
   { path: 'vermihistorialclinico', component: PacienteDetalleComponent},
+  { path: 'bitacora', component: AdminBitacoraComponent},
+  { path: 'verhistoriasclinicas', component: UsuariosListaComponent},
+
+ 
+
 
 
   

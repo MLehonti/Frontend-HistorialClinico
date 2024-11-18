@@ -22,7 +22,8 @@
       />
     </div>
     <button type="submit">Ingresar</button>
-    <div *ngIf="mensajeError" class="error-message">{{ mensajeError }}</div>
+    <button (click)="irARegistro()">Registrarse</button>
+    <div *ngIf="mensajeError" class="error-message">{{ mensajeError }}</div>    
   </form>
 </div> 
 
